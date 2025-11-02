@@ -62,18 +62,21 @@ const Hero: React.FC = () => {
           </Canvas>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-32">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="flex flex-col items-center">
           <motion.div 
-            className="text-center md:text-left"
+            className="text-center"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <p className="text-2xl md:text-3xl font-semibold text-text-secondary mb-2">
+              Hi, I'm
+            </p>
             <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-shadow-lg">
               AJITHKUMAR R
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-text-secondary mb-2">
-              Full Stack Developer
+              Junior software developer
             </h2>
             <p className="text-xl text-text-secondary mb-6">
               React • Node.js • MongoDB
@@ -81,29 +84,16 @@ const Hero: React.FC = () => {
             <p className="italic text-text-secondary mb-8">
               "Passionate tech enthusiast | Building the future, one line at a time"
             </p>
-            <div className="flex justify-center md:justify-start space-x-4 mb-8">
+            <div className="flex justify-center space-x-4 mb-8">
               <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="px-6 py-3 bg-accent text-white rounded-md font-semibold hover:bg-accent-hover transition-all duration-300 transform hover:scale-105">View Projects</a>
               <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="px-6 py-3 bg-secondary text-text rounded-md font-semibold hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">Get In Touch</a>
             </div>
-            <div className="flex justify-center md:justify-start space-x-4">
+            <div className="flex justify-center space-x-4">
               {socialLinks.slice(0, 3).map(link => (
                 <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="p-3 bg-secondary rounded-full text-text-secondary hover:text-accent hover:bg-gray-700 transition-all duration-300">
                   <link.icon className="w-6 h-6" />
                 </a>
               ))}
-            </div>
-          </motion.div>
-          <motion.div 
-            className="flex justify-center translate-y-20"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
-                <div className="absolute w-full h-full rounded-full border border-accent/50 animate-ripple"></div>
-                <div className="absolute w-full h-full rounded-full border border-accent/50 animate-ripple" style={{ animationDelay: '0.75s' }}></div>
-                <div className="absolute inset-0 bg-accent rounded-full blur-2xl opacity-30 animate-pulse"></div>
-                <img src="https://drive.google.com/file/d/1q4kUjnUsEDwjlSZiIk0UAYivggrLxVNl/view?usp=drive_link" alt="Ajithkumar R" className="relative z-10 w-full h-full object-cover rounded-full border-4 border-secondary shadow-2xl" />
             </div>
           </motion.div>
         </div>
