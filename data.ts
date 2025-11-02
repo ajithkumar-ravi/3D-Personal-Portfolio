@@ -82,8 +82,8 @@ export const projectsData: Project[] = [
       'Full-stack MERN app',
       'Responsive UI, course booking, user dashboard',
     ],
-    liveUrl: '#',
-    codeUrl: '#',
+    liveUrl: 'https://ajithkumar-r.neocities.org/Online%20Course%20Reservation%20/',
+    codeUrl: 'https://github.com/ajithkumar-ravi/Online-Course-Reservation/tree/main/project',
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
   },
   {
@@ -92,8 +92,8 @@ export const projectsData: Project[] = [
     description: [
       'Responsive design, interactive menu, cart simulation',
     ],
-    liveUrl: '#',
-    codeUrl: '#',
+    liveUrl: 'https://ajithkumar-r.neocities.org/Food%20Delivery%20Website/',
+    codeUrl: 'https://github.com/ajithkumar-ravi?tab=repositories',
     tags: ['HTML', 'CSS', 'JavaScript'],
   },
   {
@@ -103,8 +103,8 @@ export const projectsData: Project[] = [
       'Client-side login/register toggle',
       'Smooth animations with JavaScript',
     ],
-    liveUrl: '#',
-    codeUrl: '#',
+    liveUrl: 'https://ajithkumar-r.neocities.org/Ajithkumar%20login%20page/intex',
+    codeUrl: 'https://github.com/ajithkumar-ravi/Responsive-login-page',
     tags: ['HTML', 'CSS', 'JavaScript'],
   },
 ];
