@@ -4,13 +4,13 @@ import SectionWrapper from '../SectionWrapper';
 
 const techSkills = [
   { name: 'HTML5', icon: 'https://cdn.simpleicons.org/html5/E34F26' },
-  { name: 'CSS3', icon: 'https://api.iconify.design/logos:css-3.svg' },
+  { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
   { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
   { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
   { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
   { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032' },
   { name: 'GitHub', icon: 'https://cdn.simpleicons.org/github/FFFFFF' },
-  { name: 'VS Code', icon: 'https://api.iconify.design/logos:visual-studio-code.svg' },
+  { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
   { name: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/FFFFFF' },
   { name: 'Replit', icon: 'https://cdn.simpleicons.org/replit/FFFFFF' },
   { name: 'Notion', icon: 'https://cdn.simpleicons.org/notion/FFFFFF' },
@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
   return (
     <SectionWrapper id="skills" title="Skills & Expertise" subtitle="My technical toolkit">
         <div
-            className="w-full overflow-hidden relative"
+            className="w-full overflow-hidden relative py-8"
             style={{
                 maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
             }}

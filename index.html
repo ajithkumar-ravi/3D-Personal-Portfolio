@@ -29,6 +29,7 @@
               'fade-in': 'fadeIn 1s ease-in-out forwards',
               'float': 'float 6s ease-in-out infinite',
               'scroll-left': 'scroll-left 60s linear infinite',
+              'ripple': 'ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite',
             },
             keyframes: {
               typewriter: {
@@ -51,6 +52,10 @@
               'scroll-left': {
                 '0%': { transform: 'translateX(0)' },
                 '100%': { transform: 'translateX(-50%)' },
+              },
+              ripple: {
+                '0%': { transform: 'scale(0.8)', opacity: '1' },
+                '100%': { transform: 'scale(2.4)', opacity: '0' },
               },
             },
           },
