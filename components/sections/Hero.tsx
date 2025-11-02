@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             <Globe />
           </Canvas>
       </div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-32">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div 
             className="text-center md:text-left"
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
             </div>
           </motion.div>
           <motion.div 
-            className="flex justify-center translate-y-12"
+            className="flex justify-center translate-y-20"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
