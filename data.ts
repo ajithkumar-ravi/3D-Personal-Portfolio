@@ -115,6 +115,9 @@ export const certificationsData: Certification[] = [
   { title: 'Introduction to Generative AI', issuer: 'Simplilearn', date: 'Jul 2025', certificateUrl: 'https://picsum.photos/seed/genai/800/600' },
   { title: 'AWS for Beginners', issuer: 'Simplilearn', date: 'Jul 2025', certificateUrl: 'https://picsum.photos/seed/aws/800/600' },
   { title: 'Introduction to MS Excel', issuer: 'Microsoft', date: 'Jul 2025', certificateUrl: 'https://picsum.photos/seed/excel/800/600' },
+  { title: 'IBM Cloud Essential', issuer: 'Cognitive Class', date: 'Sep 2025', certificateUrl: 'https://picsum.photos/seed/ibmcloud/800/600' },
+  { title: 'Tata Data Visualisation', issuer: 'Forage', date: 'June 2025', certificateUrl: 'https://picsum.photos/seed/tata/800/600' },
+  { title: 'Introduction to MongoDB', issuer: 'MongoDB', date: 'Aug 2024', certificateUrl: 'https://picsum.photos/seed/mongodb/800/600' },
 ];
 
 export const socialLinks: SocialLink[] = [

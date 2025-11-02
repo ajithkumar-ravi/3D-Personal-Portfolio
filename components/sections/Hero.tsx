@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
                 <div className="absolute w-full h-full rounded-full border border-accent/50 animate-ripple"></div>
                 <div className="absolute w-full h-full rounded-full border border-accent/50 animate-ripple" style={{ animationDelay: '0.75s' }}></div>
                 <div className="absolute inset-0 bg-accent rounded-full blur-2xl opacity-30 animate-pulse"></div>
-                <img src="https://i.ibb.co/Q8r2k5W/profile-photo.jpg" alt="Ajithkumar R" className="relative z-10 w-full h-full object-cover rounded-full border-4 border-secondary shadow-2xl" />
+                <img src="https://i.ibb.co/6g3b01Z/profile-photo.jpg" alt="Ajithkumar R" className="relative z-10 w-full h-full object-cover rounded-full border-4 border-secondary shadow-2xl" />
             </div>
           </motion.div>
         </div>
