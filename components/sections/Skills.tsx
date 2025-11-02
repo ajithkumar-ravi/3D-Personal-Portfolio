@@ -1,61 +1,42 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import SectionWrapper from '../SectionWrapper';
-import { skillsData } from '../../data';
-import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-import SkillCloud from '../3d/SkillCloud';
-import { Layers, Wrench, Code } from 'lucide-react';
+
+const techSkills = [
+  { name: 'HTML5', icon: 'https://cdn.simpleicons.org/html5/E34F26' },
+  { name: 'CSS3', icon: 'https://api.iconify.design/logos:css-3.svg' },
+  { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+  { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
+  { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
+  { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032' },
+  { name: 'GitHub', icon: 'https://cdn.simpleicons.org/github/FFFFFF' },
+  { name: 'VS Code', icon: 'https://api.iconify.design/logos:visual-studio-code.svg' },
+  { name: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/FFFFFF' },
+  { name: 'Replit', icon: 'https://cdn.simpleicons.org/replit/FFFFFF' },
+  { name: 'Notion', icon: 'https://cdn.simpleicons.org/notion/FFFFFF' },
+];
+
 
 const Skills: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState(skillsData[0].title);
+  const duplicatedSkills = [...techSkills, ...techSkills];
 
   return (
-    <SectionWrapper id="skills" title="Skills & Expertise" subtitle="A comprehensive toolkit for building modern web applications">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="w-full h-96 lg:h-[500px]">
-                <Canvas camera={{ position: [0, 0, 35], fov: 75 }}>
-                   <SkillCloud />
-                </Canvas>
-            </div>
-            <div className="flex flex-col space-y-8">
-                <div className="flex flex-wrap gap-4">
-                {skillsData.map((category) => (
-                    <motion.button
-                        key={category.title}
-                        onClick={() => setActiveCategory(category.title)}
-                        className={`px-4 py-2 rounded-md font-semibold transition-all duration-300 ${activeCategory === category.title ? 'bg-accent text-white' : 'bg-primary text-text-secondary hover:bg-secondary'}`}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                    {category.title}
-                    </motion.button>
-                ))}
-                </div>
-                <div>
-                {skillsData.map((category) => (
-                    <div key={category.title} className={activeCategory === category.title ? 'block' : 'hidden'}>
-                        <motion.div 
-                            className="flex flex-wrap gap-3"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            {category.skills.map((skill, index) => (
-                                <motion.div
-                                key={skill}
-                                className="bg-secondary px-4 py-2 rounded text-text font-medium"
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.3, delay: index * 0.1 }}
-                                >
-                                {skill}
-                                </motion.div>
-                            ))}
-                        </motion.div>
+    <SectionWrapper id="skills" title="Skills & Expertise" subtitle="My technical toolkit">
+        <div
+            className="w-full overflow-hidden relative"
+            style={{
+                maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+            }}
+        >
+            <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
+                {duplicatedSkills.map((skill, index) => (
+                    <div key={index} className="w-44 h-40 mx-4 flex-shrink-0">
+                        <div className="w-full h-full p-4 bg-primary border border-secondary rounded-lg flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/40 transform hover:-translate-y-2 hover:scale-105">
+                            <img src={skill.icon} alt={skill.name} className="h-14 w-14 object-contain" />
+                            <p className="text-text-secondary font-medium text-center">{skill.name}</p>
+                        </div>
                     </div>
                 ))}
-                </div>
             </div>
         </div>
     </SectionWrapper>

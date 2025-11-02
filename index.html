@@ -28,6 +28,7 @@
               'caret': 'typewriter 2s steps(40) forwards, blink 1s steps(40) infinite 2s',
               'fade-in': 'fadeIn 1s ease-in-out forwards',
               'float': 'float 6s ease-in-out infinite',
+              'scroll-left': 'scroll-left 60s linear infinite',
             },
             keyframes: {
               typewriter: {
@@ -46,6 +47,10 @@
                 '0%': { transform: 'translateY(0px)' },
                 '50%': { transform: 'translateY(-20px)' },
                 '100%': { transform: 'translateY(0px)' },
+              },
+              'scroll-left': {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
               },
             },
           },
