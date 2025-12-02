@@ -9,12 +9,46 @@ import ProjectCube from '../3d/ProjectCube';
 
 const Projects: React.FC = () => {
   return (
-    <SectionWrapper id="projects" title="Projects" subtitle="Some of the things I've built">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <SectionWrapper id="projects" title="Projects" subtitle="Some of the things I've built" className="relative overflow-hidden">
+      {/* Background glowing blobs */}
+      <motion.div
+        className="absolute top-1/4 -left-32 w-96 h-96 bg-accent/20 rounded-full filter blur-3xl opacity-50 pointer-events-none"
+        animate={{
+          x: [0, 50, -50, 0],
+          y: [0, -50, 50, 0],
+          rotate: [0, 90, 0],
+          scale: [1, 1.2, 0.8, 1],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          repeatType: 'mirror',
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 -right-32 w-96 h-96 bg-blue-600/20 rounded-full filter blur-3xl opacity-50 pointer-events-none"
+        animate={{
+          x: [0, -50, 50, 0],
+          y: [0, 50, -50, 0],
+          rotate: [0, -90, 0],
+          scale: [1, 0.8, 1.2, 1],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          repeatType: 'mirror',
+          ease: 'easeInOut',
+          delay: 5,
+        }}
+      />
+      
+      {/* The z-10 class ensures project cards are on top of the glowing background */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {projectsData.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-primary rounded-lg shadow-lg border border-secondary overflow-hidden flex flex-col group"
+            className="bg-primary/50 backdrop-blur-sm rounded-lg shadow-lg border border-secondary overflow-hidden flex flex-col group"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

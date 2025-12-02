@@ -59,7 +59,8 @@ const Header: React.FC = () => {
           ))}
         </nav>
         <a 
-          href="mailto:ajithkumarravi.dev@gmail.com"
+          href="#contact"
+          onClick={(e) => handleNavClick(e, 'contact')}
           className="px-4 py-2 bg-accent hover:bg-accent-hover text-white rounded-md font-medium transition-transform duration-300 hover:scale-105"
         >
           Hire Me
