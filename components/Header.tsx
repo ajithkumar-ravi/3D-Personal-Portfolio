@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { socialLinks } from '../data';
 
 const navLinks = ['About', 'Skills', 'Experience', 'Projects', 'Certifications', 'Contact'];
 
@@ -35,6 +36,8 @@ const Header: React.FC = () => {
     }
   };
 
+  const hireMeLink = socialLinks.find(link => link.name === 'Email')?.url || 'mailto:ajithkumarravi.dev@gmail.com';
+
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}
@@ -59,8 +62,7 @@ const Header: React.FC = () => {
           ))}
         </nav>
         <a 
-          href="#contact"
-          onClick={(e) => handleNavClick(e, 'contact')}
+          href={hireMeLink}
           className="px-4 py-2 bg-accent hover:bg-accent-hover text-white rounded-md font-medium transition-transform duration-300 hover:scale-105"
         >
           Hire Me

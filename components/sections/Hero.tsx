@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
               Junior software developer
             </h2>
             <p className="text-xl text-text-secondary mb-6">
-              React • Node.js • MongoDB
+              JavaScript • React.js • Python
             </p>
             <p className="italic text-text-secondary mb-8">
               "Passionate tech enthusiast | Building the future, one line at a time"
